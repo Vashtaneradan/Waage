@@ -1,0 +1,53 @@
+{
+  "name": "Waage",
+  "version": "1.0.0",
+  "description": "open source project for tracking weight",
+  "license": "MIT",
+  "main": "Gruntfile.js",
+  "author": "VAshtaneradan",
+  "eslintConfig": {
+    "extends": "airbnb-base/legacy",
+    "env": {
+      "jquery": true
+    },
+    "rules": {
+      "no-plusplus": "off",
+      "vars-on-top": "off",
+      "max-len": "off",
+      "no-multi-assign": "off",
+      "no-use-before-define": "off",
+      "no-restricted-syntax": [
+        "error",
+        "LabeledStatement",
+        "WithStatement"
+      ],
+      "func-names": "off"
+    }
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.3",
+    "cssnano": "^3.10.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-onelineperfile": "^1.0.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-stylelint": "^0.9.0",
+    "load-grunt-tasks": "^3.5.2",
+    "postcss-sorting": "^3.0.1",
+    "stylelint-scss": "^2.1.0"
+  },
+  "devDependencies": {
+    "stylelint": "^8.0.0"
+  }
+}
