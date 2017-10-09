@@ -3,9 +3,15 @@
     "typo3fluid/fluid": "^2.4",
     "filp/whoops": "^2.1",
     "league/route": "^3.0",
-    "zendframework/zend-diactoros": "^1.6"
+    "zendframework/zend-diactoros": "^1.6",
+    "doctrine/orm": "^2.5"
   },
   "require-dev": {
     "pluswerk/grumphp-config": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kanti\\": "src/"
+    }
   }
 }
