@@ -1,0 +1,9 @@
+{
+  "methodCalls": [
+    {
+      "class": "\\League\\Container\\Container",
+      "method": "get",
+      "position": 0
+    }
+  ]
+}
