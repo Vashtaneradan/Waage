@@ -41,7 +41,11 @@ $whoops->register();
 $container->add(ResponseInterface::class, Response::class);
 $container->add(ServerRequestInterface::class, function () {
     return ServerRequestFactory::fromGlobals(
-        $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES
+        $_SERVER,
+        $_GET,
+        $_POST,
+        $_COOKIE,
+        $_FILES
     );
 });
 
