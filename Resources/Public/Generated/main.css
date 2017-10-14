@@ -8,6 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Amaranth:400,700");
 html {
   line-height: 1.15;
   /* 1 */
@@ -391,5 +392,68 @@ template {
 [hidden] {
   display: none; }
 
+/******************** Hamburger Menue ********************************/
+.navBarWrapper {
+  font-size: 24px;
+  font-weight: bold; }
+
+.menuIcon {
+  display: inline-block;
+  cursor: pointer;
+  margin: 15px 20px 0 0;
+  position: fixed;
+  top: 0;
+  right: 0; }
+
+.navBar {
+  position: fixed;
+  display: block;
+  right: -100%;
+  padding-top: 60px;
+  height: 100%;
+  margin: 0;
+  width: 60%;
+  max-width: 500px;
+  background-color: rgba(27, 254, 61, 0.51);
+  transition: 0.4s; }
+
+.hamburger {
+  display: none; }
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s; }
+
+.hamburger:checked ~ .menuIcon .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(310deg) translate(-9px, 6px); }
+
+.hamburger:checked ~ .menuIcon .bar2 {
+  opacity: 0;
+  transform: rotate(-315deg) translate(-8px, -8px); }
+
+.hamburger:checked ~ .menuIcon .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(-315deg) translate(-8px, -8px); }
+
+.hamburger:checked ~ .besideNavBar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0; }
+
+.hamburger:checked ~ .navBar {
+  right: 0; }
+
+.navBar__Item {
+  list-style-type: none;
+  margin: 15px 0 15px 0; }
+
 body {
-  background-color: #333; }
+  font-family: "Amaranth", sans-serif; }
