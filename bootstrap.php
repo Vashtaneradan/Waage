@@ -14,7 +14,7 @@ $whoops->register();
 
 // Create a simple "default" Doctrine ORM configuration for Annotations
 $isDevMode = true;
-$config = Setup::createAnnotationMetadataConfiguration([__DIR__ . "/src/Domain/Model/"], $isDevMode);
+$config = Setup::createAnnotationMetadataConfiguration([__DIR__ . "/Classes/Domain/Model/"], $isDevMode);
 
 // database configuration parameters
 $conn = [

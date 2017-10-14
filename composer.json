@@ -1,4 +1,19 @@
 {
+  "autoload": {
+    "psr-4": {
+      "Kanti\\": "Classes/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.0"
+    }
+  },
+  "extra": {
+    "grumphp": {
+      "config-default-path": "vendor/pluswerk/grumphp-config/grumphp.yml"
+    }
+  },
   "require": {
     "typo3fluid/fluid": "^2.4",
     "filp/whoops": "^2.1",
@@ -8,10 +23,5 @@
   },
   "require-dev": {
     "pluswerk/grumphp-config": "^2.1"
-  },
-  "autoload": {
-    "psr-4": {
-      "Kanti\\": "src/"
-    }
   }
 }
