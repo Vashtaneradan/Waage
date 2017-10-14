@@ -1,6 +1,11 @@
 {
-    "require": {
-        "typo3fluid/fluid": "^2.4",
-        "filp/whoops": "^2.1"
-    }
+  "require": {
+    "typo3fluid/fluid": "^2.4",
+    "filp/whoops": "^2.1",
+    "league/route": "^3.0",
+    "zendframework/zend-diactoros": "^1.6"
+  },
+  "require-dev": {
+    "pluswerk/grumphp-config": "^2.1"
+  }
 }
