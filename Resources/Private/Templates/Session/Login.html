@@ -1,8 +1,50 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"
       xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
 >
-<f:layout name="LoggedIn"/>
+<f:layout name="Empty"/>
 
 <f:section name="Main">
+
+  <!-- foreign LogIn https://codepen.io/atakan/pen/gqbIz -->
+  <!-- multistep form -->
+  <form id="msform" class="msform">
+    <!-- progressbar -->
+    <ul id="progressbar" class="progressbar">
+      <li class="active">Account Setup</li>
+      <li>Personal Details</li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset>
+      <h2 class="fs-title">Create your account</h2>
+      <h3 class="fs-subtitle">This is step 1</h3>
+      <input type="text" name="username" placeholder="Username" required/>
+      <input type="email" name="email" placeholder="Email" required/>
+      <input type="password" name="pass" placeholder="Password" required/>
+      <input type="password" name="cpass" placeholder="Confirm Password" required/>
+      <input type="button" name="next" class="next action-button" value="Next"/>
+      <input type="submit" name="logIn" class="submit action-button secondary secondaryColor" value="or LogIn"/>
+    </fieldset>
+
+    <fieldset>
+      <h2 class="fs-title">Personal Details</h2>
+      <h3 class="fs-subtitle">as accurately as possible</h3>
+      <input type="number" name="age" placeholder="age" required/>
+      <input type="number" name="height" placeholder="height in cm" required/>
+      <input type="number" name="weight" placeholder="weight in kg"/>
+      <input type="button" name="previous" class="previous action-button" value="Previous"/>
+      <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+    </fieldset>
+
+    <fieldset>
+      <h2 class="fs-title">Log In</h2>
+      <input type="text" name="username" placeholder="Username" required/>
+      <input type="password" name="pass" placeholder="Password" required/>
+      <input type="submit" name="logIn" class="submit action-button secondaryColor" value="LogIn"/>
+      <input type="submit" name="logIn" class="previous2 action-button signIn" value="or SignIn"/>
+    </fieldset>
+
+  </form>
+
+  <!-- foreign LogIn https://codepen.io/atakan/pen/gqbIz-->
 
 </f:section>

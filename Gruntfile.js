@@ -19,9 +19,17 @@ var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 
 module.exports = function (grunt) {
-  var jsFilesToIgnore = [];
+  var jsFilesToIgnore = [
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/jquery.easing/jquery.easing.js',
+    'Resources/Public/JavaScript/LogIn.js'
+  ];
 
-  var jsFilesToUse = [];
+  var jsFilesToUse = [
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/jquery.easing/jquery.easing.js',
+    'Resources/Public/JavaScript/LogIn.js'
+  ];
 
   var jsFilesToIgnoreNegated = [];
   for (var i = 0; i < jsFilesToIgnore.length; i++) {
@@ -89,7 +97,7 @@ module.exports = function (grunt) {
       },
       aus_project: {
         src: jsFilesToUse,
-        dest: 'typo3conf/ext/aus_project/Resources/Public/Generated/main.min.js'
+        dest: 'Resources/Public/Generated/main.min.js'
       }
     };
 
@@ -97,15 +105,15 @@ module.exports = function (grunt) {
     gruntConfig.compress.javascript = {
       options: compressOptions,
       files: {
-        'typo3conf/ext/aus_project/Resources/Public/Generated/main.min.js.gz': 'typo3conf/ext/aus_project/Resources/Public/Generated/main.min.js'
+        'Resources/Public/Generated/main.min.js.gz': 'Resources/Public/Generated/main.min.js'
       }
     };
 
     // https://github.com/gruntjs/grunt-contrib-watch
     gruntConfig.watch.uglify = {
       files: jsFilesToUse.concat([
-        'typo3conf/ext/**/Resources/Public/JavaScript/*.js',
-        'typo3conf/ext/**/Resources/Public/JavaScript/**/*.js'
+        'Resources/Public/JavaScript/*.js',
+        'Resources/Public/JavaScript/**/*.js'
       ]),
       tasks: ['eslint', 'uglify', 'compress']
     };
