@@ -19,7 +19,8 @@
     "filp/whoops": "^2.1",
     "league/route": "^3.0",
     "zendframework/zend-diactoros": "^1.6",
-    "doctrine/orm": "^2.5"
+    "doctrine/orm": "^2.5",
+    "oscarotero/psr7-middlewares": "^3.21"
   },
   "require-dev": {
     "pluswerk/grumphp-config": "^2.1"

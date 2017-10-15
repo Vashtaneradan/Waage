@@ -5,16 +5,15 @@ namespace Kanti\Startup;
 
 use Kanti\Controller\SessionController;
 use Kanti\Controller\UserController;
-use League\Route\RouteCollectionInterface;
+use League\Route\RouteCollection;
 
-/**
- * Class Routes
- * @package Kanti\Startup
- */
 class Routes
 {
-    public function configure(RouteCollectionInterface $route)
+    public function configure(RouteCollection $route)
     {
+        //only in production:
+        //$route->middleware((new \Psr7Middlewares\Middleware\TrailingSlash(true))->redirect(301));
+
         $route->map('GET', '/register', UserController::class . '::register');
         $route->map('POST', '/register', UserController::class . '::create');
 

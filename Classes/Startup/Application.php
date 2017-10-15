@@ -12,6 +12,7 @@ use Monolog\Logger;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Log\LoggerInterface;
+use Psr7Middlewares\Middleware\Whoops;
 use TYPO3Fluid\Fluid\Core\Cache\SimpleFileCache;
 use TYPO3Fluid\Fluid\View\AbstractTemplateView;
 use TYPO3Fluid\Fluid\View\TemplateView;
@@ -32,14 +33,6 @@ class Application
     {
         $this->container = new Container();
         $this->container->delegate(new ReflectionContainer());
-    }
-
-    public function registerErrorHandler()
-    {
-        $whoops = $this->container->get(Run::class);
-        $whoops->pushHandler($this->container->get(PrettyPageHandler::class));
-        $whoops->register();
-        return $this;
     }
 
     public function configureLogger()
@@ -84,7 +77,6 @@ class Application
     {
         $this->container->add(RouteCollectionInterface::class, function () {
             $route = new RouteCollection($this->container);
-            //$route->middleware(function () {});
             $this->container->get(Routes::class)->configure($route);
             return $route;
         });
@@ -112,7 +104,8 @@ class Application
         $response = $this->container->get(ResponseInterface::class);
         $emitter = $this->container->get(SapiEmitter::class);
 
-        $response = $route->dispatch($serverRequest, $response);
+        $whoopsMiddleware = new Whoops();
+        $response = $whoopsMiddleware($serverRequest, $response, [$route, 'dispatch']);
         $emitter->emit($response);
     }
 }
