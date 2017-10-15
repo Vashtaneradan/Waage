@@ -2,3 +2,4 @@
 /.idea/
 /node_modules/
 /Resources/Private/Database/db.sqlite
+/Cache/

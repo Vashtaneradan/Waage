@@ -4,6 +4,11 @@
       "class": "\\League\\Container\\Container",
       "method": "get",
       "position": 0
+    },
+    {
+      "class": "\\League\\Container\\ContainerInterface",
+      "method": "get",
+      "position": 0
     }
   ]
 }

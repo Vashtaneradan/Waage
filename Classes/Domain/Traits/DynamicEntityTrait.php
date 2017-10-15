@@ -1,8 +1,10 @@
 <?php
-namespace Kanti;
+declare(strict_types=1);
+
+namespace Kanti\Domain\Traits;
 
 /**
- * Trait AbstractEntity
+ * Traits AbstractEntity
  *
  * @package AUS\AusUtility\Extbase\DomainObject
  * @author anders und sehr GmbH <m.hoelzle@andersundsehr.com>
