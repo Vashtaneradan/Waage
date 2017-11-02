@@ -28,6 +28,7 @@ module.exports = function (grunt) {
   var jsFilesToUse = [
     'node_modules/jquery/dist/jquery.js',
     'node_modules/jquery.easing/jquery.easing.js',
+    'Resources/Public/JavaScript/Functions.js',
     'Resources/Public/JavaScript/LogIn.js'
   ];
 
