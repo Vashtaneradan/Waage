@@ -1,0 +1,8 @@
+{
+  "extends": "airbnb-style/linters/tslint.json",
+  "rules": {
+    "typedef": false,
+    "no-use-before-declare": false,
+    "no-unused-variable": false
+  }
+}

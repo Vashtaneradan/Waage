@@ -21,15 +21,13 @@ var cssnano = require('cssnano');
 module.exports = function (grunt) {
   var jsFilesToIgnore = [
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/jquery.easing/jquery.easing.js',
-    'Resources/Public/JavaScript/LogIn.js'
+    'node_modules/jquery.easing/jquery.easing.js'
   ];
 
   var jsFilesToUse = [
     'node_modules/jquery/dist/jquery.js',
     'node_modules/jquery.easing/jquery.easing.js',
-    'Resources/Public/JavaScript/Functions.js',
-    'Resources/Public/JavaScript/LogIn.js'
+    'Resources/Public/JavaScript/Functions.js'
   ];
 
   var jsFilesToIgnoreNegated = [];

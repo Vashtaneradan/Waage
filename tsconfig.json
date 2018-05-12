@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./Resources/Public/Generated/",
+    "sourceMap": true,
+    "module": "esnext",
+    "target": "es5",
+    "lib": [
+      "DOM",
+      "ES5",
+      "ScriptHost",
+      "ES2015.Promise",
+      "ES2015.iterable"
+    ],
+    "allowJs": false,
+    "noImplicitAny": false,
+    "removeComments": true
+  },
+  "files": [
+    "Resources/Private/TypeScript/index.ts",
+    "Resources/Private/TypeScript/typings.d.ts"
+  ],
+  "exclude": [
+    "/node_modules/"
+  ]
+}

@@ -1,57 +1,40 @@
 {
-  "name": "Waage",
-  "version": "1.0.0",
-  "description": "open source project for tracking weight",
-  "license": "MIT",
-  "main": "Gruntfile.js",
+  "name": "waage",
+  "version": "0.0.1",
   "author": "Vashtaneradan",
-  "eslintConfig": {
-    "extends": "airbnb-base/legacy",
-    "env": {
-      "jquery": true
-    },
-    "rules": {
-      "no-plusplus": "off",
-      "vars-on-top": "off",
-      "max-len": "off",
-      "no-multi-assign": "off",
-      "no-use-before-define": "off",
-      "no-unused-vars": "off",
-      "no-console": "off",
-      "no-restricted-syntax": [
-        "error",
-        "LabeledStatement",
-        "WithStatement"
-      ],
-      "func-names": "off"
-    }
-  },
-  "dependencies": {
-    "autoprefixer": "^7.1.3",
-    "cssnano": "^3.10.0",
-    "eslint-config-airbnb": "^15.0.2",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-onelineperfile": "^1.0.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.1.0",
-    "grunt": "^1.0.1",
-    "grunt-contrib-compress": "^1.4.3",
-    "grunt-contrib-imagemin": "^2.0.1",
-    "grunt-contrib-uglify": "^3.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-eslint": "^19.0.0",
-    "grunt-postcss": "^0.8.0",
-    "grunt-sass": "^2.0.0",
-    "grunt-stylelint": "^0.9.0",
-    "jquery": "^3.2.1",
-    "jquery.easing": "^1.4.1",
-    "load-grunt-tasks": "^3.5.2",
-    "postcss-sorting": "^3.0.1",
-    "stylelint-scss": "^2.1.0"
-  },
   "devDependencies": {
-    "stylelint": "^8.0.0"
-  }
+    "airbnb-style": "git+https://github.com/matuz/typescript.git#patch-1",
+    "autoprefixer": "^7.0.1",
+    "copy-webpack-plugin": "^4.3.0",
+    "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.9",
+    "postcss-sorting": "^3.1.0",
+    "sass-loader": "^6.0.6",
+    "stylelint": "^8.4.0",
+    "stylelint-scss": "^2.2.0",
+    "stylelint-webpack-plugin": "^0.10.1",
+    "ts-loader": "^3.1.0",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1"
+  },
+  "browserslist": [
+    "ie 10-11",
+    "Firefox >= 53",
+    "Chrome >= 58",
+    "Safari >= 8",
+    "iOS >= 10",
+    "last 2 Edge versions",
+    "last 2 Opera versions",
+    "last 2 Android versions",
+    "last 2 ChromeAndroid versions",
+    "last 2 FirefoxAndroid versions",
+    "last 2 OperaMobile versions",
+    "last 2 OperaMini versions",
+    "last 2 ExplorerMobile versions"
+  ]
 }
